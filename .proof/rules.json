@@ -1,0 +1,46 @@
+{
+  "pocp": 1,
+  "triggers": {
+    "broad_files": 10,
+    "cross_area": {
+      "areas": 4,
+      "min_files": 8
+    },
+    "globs": []
+  },
+  "count_exempt": [
+    "**/*.md",
+    "**/*.mdx",
+    "**/*.txt",
+    "docs/**",
+    "test/**",
+    "tests/**",
+    "**/__tests__/**",
+    "**/*.test.*",
+    "**/*.spec.*",
+    "**/package-lock.json",
+    "**/pnpm-lock.yaml",
+    "**/yarn.lock",
+    "**/*.lock",
+    "**/*.snap",
+    "**/*.png",
+    "**/*.jpg",
+    "**/*.jpeg",
+    "**/*.gif",
+    "**/*.svg",
+    "**/*.webp",
+    "**/*.ico"
+  ],
+  "requirements": [
+    {
+      "id": "unit-tests",
+      "globs": [
+        "src/**"
+      ],
+      "obligation": {
+        "kind": "test",
+        "run": "npm test"
+      }
+    }
+  ]
+}

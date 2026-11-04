@@ -9,5 +9,8 @@
   "author": "",
   "license": "ISC",
   "description": "",
-  "type": "module"
+  "type": "module",
+  "devDependencies": {
+    "pocp": "github:harriswekselblatt/pocp#b08273e0ea2aa6f796a26e2ab98afdbf08712d08"
+  }
 }

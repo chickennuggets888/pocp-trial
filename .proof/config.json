@@ -1,0 +1,17 @@
+{
+  "pocp": 1,
+  "packet_ttl_days": 14,
+  "run": {
+    "mode": "clean",
+    "timeout_ms": 600000,
+    "env": "inherit"
+  },
+  "snapshot": {
+    "link": [
+      "node_modules"
+    ]
+  },
+  "guard": {
+    "mutants": 0
+  }
+}
