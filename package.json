@@ -1,0 +1,13 @@
+{
+  "name": "trial",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "node --test test/"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "type": "module"
+}
