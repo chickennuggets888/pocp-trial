@@ -1,0 +1,226 @@
+{
+  "pocp": 1,
+  "id": "p-b65e2a80",
+  "intent": "Stop tracking node_modules",
+  "touches": [
+    "node_modules/.bin/pocp",
+    "node_modules/.package-lock.json",
+    "node_modules/pocp/LICENSE",
+    "node_modules/pocp/bin/pocp.js",
+    "node_modules/pocp/examples/github/pocp-labels.yml",
+    "node_modules/pocp/examples/github/pocp-status.yml",
+    "node_modules/pocp/examples/github/pocp.yml",
+    "node_modules/pocp/package.json",
+    "node_modules/pocp/src/approvals.js",
+    "node_modules/pocp/src/ci-github.js",
+    "node_modules/pocp/src/ci-results.js",
+    "node_modules/pocp/src/cli.js",
+    "node_modules/pocp/src/doctor.js",
+    "node_modules/pocp/src/engine.js",
+    "node_modules/pocp/src/exit.js",
+    "node_modules/pocp/src/fix.js",
+    "node_modules/pocp/src/git.js",
+    "node_modules/pocp/src/glob.js",
+    "node_modules/pocp/src/guard-check.js",
+    "node_modules/pocp/src/guard.js",
+    "node_modules/pocp/src/hash.js",
+    "node_modules/pocp/src/history.js",
+    "node_modules/pocp/src/host.js",
+    "node_modules/pocp/src/index.js",
+    "node_modules/pocp/src/init.js",
+    "node_modules/pocp/src/metrics.js",
+    "node_modules/pocp/src/mutants.js",
+    "node_modules/pocp/src/obligations.js",
+    "node_modules/pocp/src/packets.js",
+    "node_modules/pocp/src/remedies.js",
+    "node_modules/pocp/src/rules.js",
+    "node_modules/pocp/src/run-result.js",
+    "node_modules/pocp/src/runner.js",
+    "node_modules/pocp/src/sign.js",
+    "node_modules/pocp/src/status-report.js",
+    "node_modules/pocp/src/store.js",
+    "node_modules/pocp/src/test-setup.js",
+    "node_modules/pocp/src/trailer.js",
+    "node_modules/pocp/src/workspace.js",
+    "node_modules/pocp/test/vectors.json"
+  ],
+  "obligations": [
+    {
+      "id": "o1",
+      "kind": "test",
+      "run": "npm test",
+      "source": "author"
+    },
+    {
+      "id": "o2",
+      "kind": "guard",
+      "files": [
+        "node_modules/pocp/package.json",
+        "node_modules/pocp/test/vectors.json"
+      ],
+      "mutants": 0,
+      "seed": 1,
+      "text": "Existing tests or test setup changed (node_modules/pocp/package.json, node_modules/pocp/test/vectors.json): the old tests still pass on the new code, and the change only adds lines to existing tests (anything else goes to a person)",
+      "source": "guard:tests"
+    }
+  ],
+  "state": "open",
+  "policy": "sha256:3b67f1a7f790a8a6b2390fd1199be4bb00e03708ad4eb894636078cee35f5553",
+  "policy_repo": "sha256:3b67f1a7f790a8a6b2390fd1199be4bb00e03708ad4eb894636078cee35f5553",
+  "opened_at": "2026-11-04T21:01:53.422Z",
+  "opened_by": "Trial User",
+  "proofs": [
+    {
+      "obligation": "o1",
+      "obligation_digest": "sha256:849c1118beb514a761e62c0b5641f1887531153818dffef76f07379ae3ab00ea",
+      "subject": "sha256:4ccc36db055b6859304e874f7c04e1955342175016700226dcf436fadbb34609",
+      "policy": "sha256:3b67f1a7f790a8a6b2390fd1199be4bb00e03708ad4eb894636078cee35f5553",
+      "run": "npm test",
+      "mode": "clean",
+      "exit": 0,
+      "signal": null,
+      "timed_out": false,
+      "passed": true,
+      "started_at": "2026-11-04T21:01:53.822Z",
+      "duration_ms": 270,
+      "stdout_sha256": "e398e0c235de28f9c71f56b34ad6749d5ddec0ad558e80d856693609a0940585",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "run_id": "r-9f77a3e0",
+      "runner": {
+        "pocp": "0.1.0",
+        "node": "22.13.1",
+        "platform": "darwin-arm64",
+        "ci": false,
+        "lockfile_sha256": "89afa56ffea79f58f578e9e46d189047f8ea96558ad80722fa7977ff837a9f1b"
+      }
+    },
+    {
+      "obligation": "o2",
+      "obligation_digest": "sha256:afb9f6eac353a49070cead820e9c866bc736cb1bef18f2358f8989fda89605ae",
+      "subject": "sha256:4ccc36db055b6859304e874f7c04e1955342175016700226dcf436fadbb34609",
+      "policy": "sha256:3b67f1a7f790a8a6b2390fd1199be4bb00e03708ad4eb894636078cee35f5553",
+      "kind": "guard",
+      "mode": "snapshot",
+      "passed": false,
+      "started_at": "2026-11-04T21:01:54.227Z",
+      "duration_ms": 379,
+      "runner": {
+        "pocp": "0.1.0",
+        "node": "22.13.1",
+        "platform": "darwin-arm64",
+        "ci": false,
+        "lockfile_sha256": "89afa56ffea79f58f578e9e46d189047f8ea96558ad80722fa7977ff837a9f1b"
+      },
+      "guard": {
+        "pocp": 1,
+        "verdict": "needs-review",
+        "passed": false,
+        "summary": "the old tests pass on the new code, but the change does more than add lines to existing tests (node_modules/pocp/package.json: test settings changed; node_modules/pocp/test/vectors.json: a test file was deleted); without planted bugs (guard.mutants is 0) POCP can't check it, so a person must review it",
+        "base": "9283055ffb0c6acb9a699c567eafef8b96739674",
+        "checks": [
+          {
+            "id": "o1",
+            "run": "npm test"
+          }
+        ],
+        "old_tests": {
+          "result": "pass",
+          "restored": [
+            "node_modules/pocp/package.json (test settings)",
+            "node_modules/pocp/test/vectors.json"
+          ],
+          "runs": [
+            {
+              "check": "o1",
+              "passed": true,
+              "exit": 0,
+              "duration_ms": 268
+            }
+          ]
+        },
+        "new_tests": {
+          "result": "pass",
+          "runs": [
+            {
+              "check": "o1",
+              "passed": true,
+              "reused": true,
+              "duration_ms": 0
+            }
+          ]
+        },
+        "baseline": {
+          "result": "not-run",
+          "runs": []
+        },
+        "detection": {
+          "result": "off",
+          "budget": 0,
+          "seed": 1
+        },
+        "structural": {
+          "result": "needs-review",
+          "reasons": [
+            {
+              "file": "node_modules/pocp/package.json",
+              "why": "test settings changed"
+            },
+            {
+              "file": "node_modules/pocp/test/vectors.json",
+              "why": "a test file was deleted"
+            }
+          ]
+        },
+        "duration_ms": 379,
+        "checks_from": "packet"
+      }
+    }
+  ],
+  "attestations": [],
+  "history": [
+    {
+      "at": "2026-11-04T21:01:53.422Z",
+      "event": "opened",
+      "by": "Trial User"
+    },
+    {
+      "at": "2026-11-04T21:01:53.422Z",
+      "event": "obligation_added",
+      "obligation": "o1",
+      "source": "author",
+      "by": "Trial User"
+    },
+    {
+      "at": "2026-11-04T21:01:53.422Z",
+      "event": "requirements_synced",
+      "added": [
+        "o2"
+      ],
+      "policy": "sha256:3b67f1a7f790a8a6b2390fd1199be4bb00e03708ad4eb894636078cee35f5553"
+    },
+    {
+      "at": "2026-11-04T21:01:54.645Z",
+      "event": "proof_failed",
+      "obligation": "o2",
+      "subject": "sha256:4ccc36db055b6859304e874f7c04e1955342175016700226dcf436fadbb34609"
+    },
+    {
+      "at": "2026-11-04T21:01:55.006Z",
+      "event": "deferred",
+      "obligation": "o2",
+      "by": "Trial User",
+      "subject": "sha256:4ccc36db055b6859304e874f7c04e1955342175016700226dcf436fadbb34609"
+    }
+  ],
+  "deferrals": [
+    {
+      "obligation": "o2",
+      "obligation_digest": "sha256:afb9f6eac353a49070cead820e9c866bc736cb1bef18f2358f8989fda89605ae",
+      "subject": "sha256:4ccc36db055b6859304e874f7c04e1955342175016700226dcf436fadbb34609",
+      "by": "Trial User",
+      "at": "2026-11-04T21:01:55.006Z",
+      "to": "ci-approval",
+      "reason": "the old tests pass on the new code, but the change does more than add lines to existing tests (node_modules/pocp/package.json: test settings changed; node_modules/pocp/test/vectors.json: a test file was deleted); without planted bugs (guard.mutants is 0) POCP can't check it, so a person must review it"
+    }
+  ]
+}
