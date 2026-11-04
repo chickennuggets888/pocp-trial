@@ -13,5 +13,10 @@
   },
   "guard": {
     "mutants": 0
+  },
+  "ci": {
+    "required_checks": [
+      "verify"
+    ]
   }
 }
