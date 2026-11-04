@@ -1,0 +1,77 @@
+{
+  "pocp": 1,
+  "id": "p-ce6d0e45",
+  "intent": "Set up POCP's GitHub workflows",
+  "touches": [
+    ".github/workflows/pocp-labels.yml",
+    ".github/workflows/pocp-status.yml",
+    ".github/workflows/pocp.yml"
+  ],
+  "obligations": [
+    {
+      "id": "o1",
+      "kind": "test",
+      "run": "npm test",
+      "source": "author"
+    }
+  ],
+  "state": "proven",
+  "policy": "sha256:3b67f1a7f790a8a6b2390fd1199be4bb00e03708ad4eb894636078cee35f5553",
+  "policy_repo": "sha256:3b67f1a7f790a8a6b2390fd1199be4bb00e03708ad4eb894636078cee35f5553",
+  "opened_at": "2026-11-04T21:01:23.178Z",
+  "opened_by": "Trial User",
+  "proofs": [
+    {
+      "obligation": "o1",
+      "obligation_digest": "sha256:849c1118beb514a761e62c0b5641f1887531153818dffef76f07379ae3ab00ea",
+      "subject": "sha256:454a8cdf19a33cb1fe8094754572a6b862f103b5d00755b27e6b6b03f0925fc1",
+      "policy": "sha256:3b67f1a7f790a8a6b2390fd1199be4bb00e03708ad4eb894636078cee35f5553",
+      "run": "npm test",
+      "mode": "clean",
+      "exit": 0,
+      "signal": null,
+      "timed_out": false,
+      "passed": true,
+      "started_at": "2026-11-04T21:01:23.604Z",
+      "duration_ms": 283,
+      "stdout_sha256": "847d302c950c1fdb53db0416eb1838ec71be39b3fd4e7442a0efa877e422aa90",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "run_id": "r-ead8143f",
+      "runner": {
+        "pocp": "0.1.0",
+        "node": "22.13.1",
+        "platform": "darwin-arm64",
+        "ci": false,
+        "lockfile_sha256": "89afa56ffea79f58f578e9e46d189047f8ea96558ad80722fa7977ff837a9f1b"
+      }
+    }
+  ],
+  "attestations": [],
+  "history": [
+    {
+      "at": "2026-11-04T21:01:23.178Z",
+      "event": "opened",
+      "by": "Trial User"
+    },
+    {
+      "at": "2026-11-04T21:01:23.178Z",
+      "event": "obligation_added",
+      "obligation": "o1",
+      "source": "author",
+      "by": "Trial User"
+    },
+    {
+      "at": "2026-11-04T21:01:23.178Z",
+      "event": "requirements_synced",
+      "added": [],
+      "policy": "sha256:3b67f1a7f790a8a6b2390fd1199be4bb00e03708ad4eb894636078cee35f5553"
+    },
+    {
+      "at": "2026-11-04T21:01:24.012Z",
+      "event": "state",
+      "from": "open",
+      "to": "proven",
+      "subject": "sha256:454a8cdf19a33cb1fe8094754572a6b862f103b5d00755b27e6b6b03f0925fc1"
+    }
+  ]
+}
