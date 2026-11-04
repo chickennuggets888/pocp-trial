@@ -1,0 +1,107 @@
+{
+  "pocp": 1,
+  "id": "p-8a5c92a1",
+  "intent": "add: coerce to numbers",
+  "touches": [
+    "src/add.js"
+  ],
+  "obligations": [
+    {
+      "id": "o1",
+      "kind": "test",
+      "run": "npm test",
+      "source": "rule:unit-tests"
+    }
+  ],
+  "state": "proven",
+  "policy": "sha256:6778e0ca87ab39e20dc12800413bcfbf2c2fe85d3dedf4ecc14879dee15443a3",
+  "policy_repo": "sha256:6778e0ca87ab39e20dc12800413bcfbf2c2fe85d3dedf4ecc14879dee15443a3",
+  "opened_at": "2026-11-04T20:42:22.638Z",
+  "opened_by": "Trial User",
+  "proofs": [
+    {
+      "obligation": "o1",
+      "obligation_digest": "sha256:849c1118beb514a761e62c0b5641f1887531153818dffef76f07379ae3ab00ea",
+      "subject": "sha256:584ccd076fe7a36b66934741075e7dc551393b2180f077e1326f79cc7496ca99",
+      "policy": "sha256:6778e0ca87ab39e20dc12800413bcfbf2c2fe85d3dedf4ecc14879dee15443a3",
+      "run": "npm test",
+      "mode": "clean",
+      "exit": 1,
+      "signal": null,
+      "timed_out": false,
+      "passed": false,
+      "started_at": "2026-11-04T20:42:23.101Z",
+      "duration_ms": 268,
+      "stdout_sha256": "7cacd98971e26c7c9f4f55f644949b00813e78c7b7557a35c9568bc6376d39c9",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "run_id": "r-229814cc",
+      "runner": {
+        "pocp": "0.1.0",
+        "node": "22.13.1",
+        "platform": "darwin-arm64",
+        "ci": false,
+        "lockfile_sha256": "89afa56ffea79f58f578e9e46d189047f8ea96558ad80722fa7977ff837a9f1b"
+      }
+    },
+    {
+      "obligation": "o1",
+      "obligation_digest": "sha256:849c1118beb514a761e62c0b5641f1887531153818dffef76f07379ae3ab00ea",
+      "subject": "sha256:fb3eeb253e67e7fc2f693ca451e69ca037af25f726604d9e633aaf9de9d54224",
+      "policy": "sha256:6778e0ca87ab39e20dc12800413bcfbf2c2fe85d3dedf4ecc14879dee15443a3",
+      "run": "npm test",
+      "mode": "clean",
+      "exit": 0,
+      "signal": null,
+      "timed_out": false,
+      "passed": true,
+      "started_at": "2026-11-04T20:42:40.153Z",
+      "duration_ms": 296,
+      "stdout_sha256": "3688ef4202ba1d80c6e89b9aa4ea5d623816887ed0706a84f52968f86cfeeb9f",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "run_id": "r-6a06f235",
+      "runner": {
+        "pocp": "0.1.0",
+        "node": "22.13.1",
+        "platform": "darwin-arm64",
+        "ci": false,
+        "lockfile_sha256": "89afa56ffea79f58f578e9e46d189047f8ea96558ad80722fa7977ff837a9f1b"
+      }
+    }
+  ],
+  "attestations": [],
+  "history": [
+    {
+      "at": "2026-11-04T20:42:22.638Z",
+      "event": "opened",
+      "by": "Trial User"
+    },
+    {
+      "at": "2026-11-04T20:42:22.638Z",
+      "event": "requirements_synced",
+      "added": [
+        "o1"
+      ],
+      "policy": "sha256:6778e0ca87ab39e20dc12800413bcfbf2c2fe85d3dedf4ecc14879dee15443a3"
+    },
+    {
+      "at": "2026-11-04T20:42:23.439Z",
+      "event": "proof_failed",
+      "obligation": "o1",
+      "subject": "sha256:584ccd076fe7a36b66934741075e7dc551393b2180f077e1326f79cc7496ca99"
+    },
+    {
+      "at": "2026-11-04T20:42:23.489Z",
+      "event": "state",
+      "from": "open",
+      "to": "failed",
+      "subject": "sha256:584ccd076fe7a36b66934741075e7dc551393b2180f077e1326f79cc7496ca99"
+    },
+    {
+      "at": "2026-11-04T20:42:40.567Z",
+      "event": "state",
+      "from": "failed",
+      "to": "proven",
+      "subject": "sha256:fb3eeb253e67e7fc2f693ca451e69ca037af25f726604d9e633aaf9de9d54224"
+    }
+  ]
+}
