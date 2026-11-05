@@ -11,6 +11,6 @@
   "description": "",
   "type": "module",
   "devDependencies": {
-    "pocp": "github:harriswekselblatt/pocp#b08273e0ea2aa6f796a26e2ab98afdbf08712d08"
+    "pocp": "github:harriswekselblatt/pocp#v1.0.0-rc.1"
   }
 }

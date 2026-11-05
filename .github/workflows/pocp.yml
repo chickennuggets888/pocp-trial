@@ -55,7 +55,7 @@ jobs:
       # ▶ Your toolchain (examples: actions/setup-node, actions/setup-python, actions/setup-go).
       # ▶ Install dependencies without running the PR's install scripts where you can
       #   (for example `npm ci --ignore-scripts`): anything that runs before verify is PR code.
-      - uses: harriswekselblatt/pocp@b08273e0ea2aa6f796a26e2ab98afdbf08712d08                  # pin a release or commit; the action runs its bundled pocp
+      - uses: harriswekselblatt/pocp@v1.0.0-rc.1                  # pin a release or commit; the action runs its bundled pocp
         name: verify
         id: verify
         with:
