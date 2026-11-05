@@ -1,0 +1,76 @@
+{
+  "pocp": 1,
+  "id": "p-68bb410d",
+  "intent": "Upgrade POCP to v1.0.0-rc.1",
+  "touches": [
+    ".github/workflows/pocp-status.yml",
+    ".github/workflows/pocp.yml"
+  ],
+  "obligations": [
+    {
+      "id": "o1",
+      "kind": "test",
+      "run": "npm test",
+      "source": "author"
+    }
+  ],
+  "state": "proven",
+  "policy": "sha256:3b67f1a7f790a8a6b2390fd1199be4bb00e03708ad4eb894636078cee35f5553",
+  "policy_repo": "sha256:3b67f1a7f790a8a6b2390fd1199be4bb00e03708ad4eb894636078cee35f5553",
+  "opened_at": "2026-11-05T01:41:06.798Z",
+  "opened_by": "Trial User",
+  "proofs": [
+    {
+      "obligation": "o1",
+      "obligation_digest": "sha256:849c1118beb514a761e62c0b5641f1887531153818dffef76f07379ae3ab00ea",
+      "subject": "sha256:ec6f575e6fb7367d9de7aa45c4960540f55ef595e8987c4d6f29e05cf9b06580",
+      "policy": "sha256:3b67f1a7f790a8a6b2390fd1199be4bb00e03708ad4eb894636078cee35f5553",
+      "run": "npm test",
+      "mode": "clean",
+      "exit": 0,
+      "signal": null,
+      "timed_out": false,
+      "passed": true,
+      "started_at": "2026-11-05T01:41:07.196Z",
+      "duration_ms": 277,
+      "stdout_sha256": "ff9326c6bf844f395e4226a07c084769411d260452d4d3417c4eb3f381bab6ba",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "run_id": "r-99f20436",
+      "runner": {
+        "pocp": "1.0.0-rc.1",
+        "node": "22.13.1",
+        "platform": "darwin-arm64",
+        "ci": false,
+        "lockfile_sha256": "ab76e757a1e0bf5503c9832fe79799b0217a8522552ef409b74e58be945f85dc"
+      }
+    }
+  ],
+  "attestations": [],
+  "history": [
+    {
+      "at": "2026-11-05T01:41:06.798Z",
+      "event": "opened",
+      "by": "Trial User"
+    },
+    {
+      "at": "2026-11-05T01:41:06.798Z",
+      "event": "obligation_added",
+      "obligation": "o1",
+      "source": "author",
+      "by": "Trial User"
+    },
+    {
+      "at": "2026-11-05T01:41:06.798Z",
+      "event": "requirements_synced",
+      "added": [],
+      "policy": "sha256:3b67f1a7f790a8a6b2390fd1199be4bb00e03708ad4eb894636078cee35f5553"
+    },
+    {
+      "at": "2026-11-05T01:41:07.591Z",
+      "event": "state",
+      "from": "open",
+      "to": "proven",
+      "subject": "sha256:ec6f575e6fb7367d9de7aa45c4960540f55ef595e8987c4d6f29e05cf9b06580"
+    }
+  ]
+}

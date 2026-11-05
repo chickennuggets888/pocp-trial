@@ -37,6 +37,6 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 22
-      - uses: harriswekselblatt/pocp/status@b08273e0ea2aa6f796a26e2ab98afdbf08712d08               # the same pin as the verify action
+      - uses: harriswekselblatt/pocp/status@v1.0.0-rc.1               # the same pin as the verify action
         with:
           workflow: .github/workflows/pocp.yml
