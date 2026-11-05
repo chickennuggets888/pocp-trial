@@ -1,0 +1,70 @@
+{
+  "pocp": 1,
+  "id": "p-1b4f9319",
+  "intent": "add: note on rounding (with the CI-only failing test)",
+  "touches": [
+    "src/add.js"
+  ],
+  "obligations": [
+    {
+      "id": "o1",
+      "kind": "test",
+      "run": "npm test",
+      "source": "rule:unit-tests"
+    }
+  ],
+  "state": "proven",
+  "policy": "sha256:6778e0ca87ab39e20dc12800413bcfbf2c2fe85d3dedf4ecc14879dee15443a3",
+  "policy_repo": "sha256:6778e0ca87ab39e20dc12800413bcfbf2c2fe85d3dedf4ecc14879dee15443a3",
+  "opened_at": "2026-11-05T01:44:07.954Z",
+  "opened_by": "Trial User",
+  "proofs": [
+    {
+      "obligation": "o1",
+      "obligation_digest": "sha256:849c1118beb514a761e62c0b5641f1887531153818dffef76f07379ae3ab00ea",
+      "subject": "sha256:08179998e3f748df6d74c51acced49b7d1f0145b9831c9f87f91dfc63e4b428b",
+      "policy": "sha256:6778e0ca87ab39e20dc12800413bcfbf2c2fe85d3dedf4ecc14879dee15443a3",
+      "run": "npm test",
+      "mode": "clean",
+      "exit": 0,
+      "signal": null,
+      "timed_out": false,
+      "passed": true,
+      "started_at": "2026-11-05T01:44:08.409Z",
+      "duration_ms": 297,
+      "stdout_sha256": "8ff73aa594c00f919a329d12cf1352bacc90d7147175574d6f7d06a2bc557770",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "run_id": "r-11fd7451",
+      "runner": {
+        "pocp": "1.0.0-rc.1",
+        "node": "22.13.1",
+        "platform": "darwin-arm64",
+        "ci": false,
+        "lockfile_sha256": "ab76e757a1e0bf5503c9832fe79799b0217a8522552ef409b74e58be945f85dc"
+      }
+    }
+  ],
+  "attestations": [],
+  "history": [
+    {
+      "at": "2026-11-05T01:44:07.954Z",
+      "event": "opened",
+      "by": "Trial User"
+    },
+    {
+      "at": "2026-11-05T01:44:07.954Z",
+      "event": "requirements_synced",
+      "added": [
+        "o1"
+      ],
+      "policy": "sha256:6778e0ca87ab39e20dc12800413bcfbf2c2fe85d3dedf4ecc14879dee15443a3"
+    },
+    {
+      "at": "2026-11-05T01:44:08.843Z",
+      "event": "state",
+      "from": "open",
+      "to": "proven",
+      "subject": "sha256:08179998e3f748df6d74c51acced49b7d1f0145b9831c9f87f91dfc63e4b428b"
+    }
+  ]
+}
