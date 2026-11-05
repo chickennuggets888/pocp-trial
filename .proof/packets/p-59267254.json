@@ -1,0 +1,181 @@
+{
+  "pocp": 1,
+  "id": "p-59267254",
+  "intent": "test: clearer assertion message",
+  "touches": [
+    "test/add.test.js"
+  ],
+  "obligations": [
+    {
+      "id": "o1",
+      "kind": "test",
+      "run": "npm test",
+      "source": "author"
+    },
+    {
+      "id": "o2",
+      "kind": "guard",
+      "files": [
+        "test/add.test.js"
+      ],
+      "mutants": 0,
+      "seed": 1,
+      "text": "Existing tests or test setup changed (test/add.test.js): the old tests still pass on the new code, and the change only adds lines to existing tests (anything else goes to a person)",
+      "source": "guard:tests"
+    }
+  ],
+  "state": "open",
+  "policy": "sha256:3b67f1a7f790a8a6b2390fd1199be4bb00e03708ad4eb894636078cee35f5553",
+  "policy_repo": "sha256:3b67f1a7f790a8a6b2390fd1199be4bb00e03708ad4eb894636078cee35f5553",
+  "opened_at": "2026-11-05T01:43:37.700Z",
+  "opened_by": "Trial User",
+  "proofs": [
+    {
+      "obligation": "o1",
+      "obligation_digest": "sha256:849c1118beb514a761e62c0b5641f1887531153818dffef76f07379ae3ab00ea",
+      "subject": "sha256:b2bd0e0a819aa0842fa9ec78664f39e77ca99115900924073ba76c9457ab470f",
+      "policy": "sha256:3b67f1a7f790a8a6b2390fd1199be4bb00e03708ad4eb894636078cee35f5553",
+      "run": "npm test",
+      "mode": "clean",
+      "exit": 0,
+      "signal": null,
+      "timed_out": false,
+      "passed": true,
+      "started_at": "2026-11-05T01:43:38.107Z",
+      "duration_ms": 273,
+      "stdout_sha256": "2cc7de3c898a6e64edaaf640ab3c94d8bd8258563b1f696865ef54a75aa76b34",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "run_id": "r-cfce5cc7",
+      "runner": {
+        "pocp": "1.0.0-rc.1",
+        "node": "22.13.1",
+        "platform": "darwin-arm64",
+        "ci": false,
+        "lockfile_sha256": "ab76e757a1e0bf5503c9832fe79799b0217a8522552ef409b74e58be945f85dc"
+      }
+    },
+    {
+      "obligation": "o2",
+      "obligation_digest": "sha256:22c5112374867cf8738d44a2418b0529e49f4125d29a0f7d48542a99d288dabc",
+      "subject": "sha256:b2bd0e0a819aa0842fa9ec78664f39e77ca99115900924073ba76c9457ab470f",
+      "policy": "sha256:3b67f1a7f790a8a6b2390fd1199be4bb00e03708ad4eb894636078cee35f5553",
+      "kind": "guard",
+      "mode": "snapshot",
+      "passed": false,
+      "started_at": "2026-11-05T01:43:38.522Z",
+      "duration_ms": 380,
+      "runner": {
+        "pocp": "1.0.0-rc.1",
+        "node": "22.13.1",
+        "platform": "darwin-arm64",
+        "ci": false,
+        "lockfile_sha256": "ab76e757a1e0bf5503c9832fe79799b0217a8522552ef409b74e58be945f85dc"
+      },
+      "guard": {
+        "pocp": 1,
+        "verdict": "needs-review",
+        "passed": false,
+        "summary": "the old tests pass on the new code, but the change does more than add lines to existing tests (test/add.test.js: existing test lines were changed or removed); without planted bugs (guard.mutants is 0) POCP can't check it, so a person must review it",
+        "base": "0108c06daa2183c21966cda2beb13e0aad8932cc",
+        "checks": [
+          {
+            "id": "o1",
+            "run": "npm test"
+          }
+        ],
+        "old_tests": {
+          "result": "pass",
+          "restored": [
+            "test/add.test.js"
+          ],
+          "runs": [
+            {
+              "check": "o1",
+              "passed": true,
+              "exit": 0,
+              "duration_ms": 265
+            }
+          ]
+        },
+        "new_tests": {
+          "result": "pass",
+          "runs": [
+            {
+              "check": "o1",
+              "passed": true,
+              "reused": true,
+              "duration_ms": 0
+            }
+          ]
+        },
+        "baseline": {
+          "result": "not-run",
+          "runs": []
+        },
+        "detection": {
+          "result": "off",
+          "budget": 0,
+          "seed": 1
+        },
+        "structural": {
+          "result": "needs-review",
+          "reasons": [
+            {
+              "file": "test/add.test.js",
+              "why": "existing test lines were changed or removed"
+            }
+          ]
+        },
+        "duration_ms": 380,
+        "checks_from": "packet"
+      }
+    }
+  ],
+  "attestations": [],
+  "history": [
+    {
+      "at": "2026-11-05T01:43:37.700Z",
+      "event": "opened",
+      "by": "Trial User"
+    },
+    {
+      "at": "2026-11-05T01:43:37.700Z",
+      "event": "obligation_added",
+      "obligation": "o1",
+      "source": "author",
+      "by": "Trial User"
+    },
+    {
+      "at": "2026-11-05T01:43:37.700Z",
+      "event": "requirements_synced",
+      "added": [
+        "o2"
+      ],
+      "policy": "sha256:3b67f1a7f790a8a6b2390fd1199be4bb00e03708ad4eb894636078cee35f5553"
+    },
+    {
+      "at": "2026-11-05T01:43:38.944Z",
+      "event": "proof_failed",
+      "obligation": "o2",
+      "subject": "sha256:b2bd0e0a819aa0842fa9ec78664f39e77ca99115900924073ba76c9457ab470f"
+    },
+    {
+      "at": "2026-11-05T01:43:39.289Z",
+      "event": "deferred",
+      "obligation": "o2",
+      "by": "Trial User",
+      "subject": "sha256:b2bd0e0a819aa0842fa9ec78664f39e77ca99115900924073ba76c9457ab470f"
+    }
+  ],
+  "deferrals": [
+    {
+      "obligation": "o2",
+      "obligation_digest": "sha256:22c5112374867cf8738d44a2418b0529e49f4125d29a0f7d48542a99d288dabc",
+      "subject": "sha256:b2bd0e0a819aa0842fa9ec78664f39e77ca99115900924073ba76c9457ab470f",
+      "by": "Trial User",
+      "at": "2026-11-05T01:43:39.289Z",
+      "to": "ci-approval",
+      "reason": "the old tests pass on the new code, but the change does more than add lines to existing tests (test/add.test.js: existing test lines were changed or removed); without planted bugs (guard.mutants is 0) POCP can't check it, so a person must review it"
+    }
+  ]
+}
